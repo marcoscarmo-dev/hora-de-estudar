@@ -1,0 +1,479 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0000000d;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+button {
+    margin-top: 8px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:focus-visible {
+    outline: 2px solid #1e293b;
+    outline-offset: 3px;
+}
+
+/* ABERTURA — MEU SEMESTRE */
+
+.pagina-abertura {
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 20px;
+    display: grid;
+    place-items: center;
+    background-color: #eeeee7;
+    background-image:
+        linear-gradient(#d9ddd5 1px, transparent 1px),
+        linear-gradient(90deg, #d9ddd5 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: #263e34;
+}
+
+.abertura {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    margin: 0;
+    padding: 56px 48px 40px 72px;
+    background-color: #fffef8;
+    border: 1px solid #deded2;
+    border-radius: 6px;
+    box-shadow: 8px 8px 0 #dce1d6;
+}
+
+/* Linha de margem do caderno */
+.abertura::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    background-color: #e6b9ac;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #e4eddf;
+    border-radius: 4px;
+    color: #365b44;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.abertura h1 {
+    margin: 28px 0 18px;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: normal;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.abertura h1 span {
+    color: #426b4e;
+    text-decoration: underline;
+    text-decoration-color: #e8cd77;
+    text-decoration-thickness: 6px;
+    text-underline-offset: 8px;
+}
+
+.descricao-abertura {
+    max-width: 390px;
+    color: #687369;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.perfil-academico {
+    margin: 32px 0;
+    padding: 24px;
+    background-color: #f4f3e9;
+    border: 1px solid #e4e2d5;
+    border-radius: 6px;
+}
+
+.rotulo-perfil {
+    margin: 0 0 12px;
+    color: #687369;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.perfil-academico h2 {
+    margin: 0 0 12px;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.perfil-academico p:not(.rotulo-perfil) {
+    margin: 6px 0;
+    color: #59685c;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.perfil-academico .universidade {
+    font-weight: bold;
+}
+
+.botao-acessar {
+    display: inline-block;
+    padding: 16px 24px;
+    background-color: #365b44;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.botao-acessar:hover {
+    background-color: #264431;
+}
+
+.botao-acessar:focus-visible {
+    outline: 3px solid #365b44;
+    outline-offset: 4px;
+}
+
+.rodape-abertura {
+    margin: 24px 0 0;
+    color: #687369;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .abertura {
+        padding: 36px 24px 32px 40px;
+    }
+
+    .abertura::before {
+        left: 20px;
+    }
+
+    .perfil-academico {
+        padding: 18px;
+    }
+
+    .botao-acessar {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* PÁGINA DO ORGANIZADOR */
+
+.pagina-organizador {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #eeeee7;
+    background-image:
+        linear-gradient(#d9ddd5 1px, transparent 1px),
+        linear-gradient(90deg, #d9ddd5 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: #263e34;
+}
+
+.pagina-organizador header {
+    padding: 36px 24px;
+    background-color: #fffef8;
+    border-bottom: 3px solid #365b44;
+    color: #263e34;
+    text-align: center;
+}
+
+.pagina-organizador header h1 {
+    margin: 0 0 12px;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: normal;
+}
+
+.pagina-organizador header p {
+    color: #687369;
+    line-height: 1.6;
+}
+
+.pagina-organizador main {
+    display: grid;
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    align-items: start;
+    gap: 28px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.pagina-organizador section {
+    min-width: 0;
+    margin: 0;
+    padding: 28px;
+    background-color: #fffef8;
+    border: 1px solid #deded2;
+    border-radius: 6px;
+    box-shadow: 5px 5px 0 #dce1d6;
+}
+
+.pagina-organizador h2 {
+    margin: 0 0 24px;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.pagina-organizador form {
+    gap: 10px;
+}
+
+.pagina-organizador label {
+    margin-top: 8px;
+    color: #365b44;
+    font-size: 13px;
+}
+
+.pagina-organizador input {
+    padding: 13px;
+    background-color: #ffffff;
+    border: 1px solid #cfd6c9;
+    border-radius: 6px;
+    color: #263e34;
+}
+
+.pagina-organizador input:focus {
+    outline: 2px solid #365b44;
+    outline-offset: 2px;
+}
+
+.pagina-organizador button {
+    margin-top: 18px;
+    background-color: #365b44;
+    border-radius: 6px;
+}
+
+.pagina-organizador button:hover {
+    background-color: #264431;
+}
+
+.pagina-organizador button:focus-visible {
+    outline: 2px solid #365b44;
+    outline-offset: 3px;
+}
+
+.pagina-organizador #mensagem-vazia {
+    padding: 28px 16px;
+    border: 1px dashed #cfd6c9;
+    border-radius: 6px;
+    color: #687369;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.pagina-organizador #lista-tarefas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagina-organizador #lista-tarefas li {
+    margin-bottom: 14px;
+    padding: 20px;
+    border-left: 4px solid #365b44;
+    border-radius: 4px;
+    background-color: #f0f2e9;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+    .pagina-organizador main {
+        grid-template-columns: 1fr;
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .pagina-organizador section {
+        padding: 24px;
+    }
+}
+/* Apresentação do resumo */
+.pagina-organizador .texto-resumo {
+    margin-top: 28px;
+    color: #34463b;
+    font-size: 16px;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+}
+
+.pagina-organizador .texto-resumo h4 {
+    margin: 30px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dce5d7;
+    color: #365b44;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.pagina-organizador .texto-resumo p {
+    margin: 0 0 16px;
+}
+
+.pagina-organizador .texto-resumo ul,
+.pagina-organizador .texto-resumo ol {
+    padding-left: 24px;
+}
+
+.pagina-organizador .texto-resumo li {
+    margin-bottom: 12px;
+    padding-left: 4px;
+}
+
+.pagina-organizador .texto-resumo strong {
+    color: #263e34;
+}
+
+.pagina-organizador button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+/* Biblioteca de estudos */
+.pagina-organizador .biblioteca {
+    grid-column: 1 / -1;
+}
+
+.pagina-organizador .aviso-biblioteca {
+    color: #687369;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pagina-organizador .lista-biblioteca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.pagina-organizador .cartao-estudo {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #dce1d6;
+    border-top: 4px solid #365b44;
+    border-radius: 6px;
+    background-color: #f4f3e9;
+}
+
+.pagina-organizador .cartao-estudo h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.pagina-organizador .cartao-estudo p {
+    color: #687369;
+    font-size: 12px;
+}
+
+.pagina-organizador .acoes-estudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pagina-organizador .acoes-estudo button {
+    margin-top: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+}
+
+.pagina-organizador .acoes-estudo .botao-excluir {
+    background-color: #f5e5df;
+    color: #8b3e2b;
+}
+
+.pagina-organizador .acoes-estudo .botao-excluir:hover {
+    background-color: #edd3c9;
+}
+
+@media (max-width: 420px) {
+    .pagina-organizador .lista-biblioteca {
+        grid-template-columns: 1fr;
+    }
+}

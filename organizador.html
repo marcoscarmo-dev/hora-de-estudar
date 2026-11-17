@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hora de Estudar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina-organizador">
+    <header>
+        <h1>Hora de Estudar</h1>
+        <p>Transforme seu material de aula em um guia de estudos.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Seu próximo estudo</h2>
+
+            <form id="form-resumo">
+                <label for="arquivo-pdf">Escolha seu PDF</label>
+
+                <input
+                    type="file"
+                    id="arquivo-pdf"
+                    accept=".pdf,application/pdf"
+                    aria-describedby="aviso-pdf"
+                    required
+                >
+
+                <p id="aviso-pdf" class="aviso-pdf">
+                    A identificação do tema e a geração do resumo
+                    estarão disponíveis após conectarmos a IA.
+                </p>
+
+                <button type="submit">Selecionar PDF</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Meu resumo de estudo</h2>
+
+            <p id="mensagem-material" role="status">
+                Selecione um PDF para começar.
+            </p>
+
+            <div id="material-selecionado" hidden>
+                <h3 id="titulo-material"></h3>
+                <p id="nome-arquivo"></p>
+                <p id="tamanho-arquivo"></p>
+
+                <p>
+                    O arquivo está selecionado. A leitura do conteúdo,
+                    a identificação do tema e o resumo ainda não
+                    estão conectados.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
